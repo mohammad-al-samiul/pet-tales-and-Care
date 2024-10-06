@@ -1,7 +1,7 @@
-import dotenv from 'dotenv'
-import path from 'path'
+import dotenv from "dotenv";
+import path from "path";
 
-dotenv.config({ path: path.join(process.cwd(), '.env') })
+dotenv.config({ path: path.join(process.cwd(), ".env") });
 
 export default {
   port: process.env.PORT,
@@ -18,5 +18,11 @@ export default {
   reset_password_ui_link: process.env.RESET_PASSWORD_UI_LINK,
   cloudinary_cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
   cloudinary_cloud_api_key: process.env.CLOUDINARY_API_KEY,
-  cloudinary_cloud_api_secret: process.env.CLOUDINARY_API_SECRET
-}
+  cloudinary_cloud_api_secret: process.env.CLOUDINARY_API_SECRET,
+  amarpay_signature_key: process.env.SIGNATURE_KEY,
+  amarpay_store_id: process.env.STORE_ID,
+  payment_url: process.env.PAYMENT_URL,
+  payment_verify_url: process.env.PAYMENT_VERIFY_URL,
+  backend_url: process.env.BACKEND_URL,
+  frontend_url: process.env.FRONTEND_URL,
+};
