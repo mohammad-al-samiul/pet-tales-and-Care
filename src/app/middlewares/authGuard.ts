@@ -7,6 +7,7 @@ import httpStatus from "http-status";
 import verifyAccessToken from "../utils/verifyJWT";
 import catchAsync from "../utils/catchAsync";
 import AppError from "../errors/AppError";
+import isJWTIssuedBeforePasswordChanged from "../utils/isJWTIssuedBeforePasswordChanged";
 
 const authGuard = (allowedRules: TUserRole[]) =>
   catchAsync(async (req: Request, res: Response, next: NextFunction) => {

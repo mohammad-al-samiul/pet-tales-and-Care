@@ -1,9 +1,9 @@
-import { AppError } from "../error/appError";
-import handleAsyncRequest from "../utils/handleAsyncRequest";
+import AppError from "../errors/AppError";
+import catchAsync from "../utils/catchAsync";
 
-export const parseBody = handleAsyncRequest(async (req, res, next) => {
+export const parseBody = catchAsync(async (req, res, next) => {
   if (!req?.body?.data) {
-    throw new AppError(400, 'Please provide data in the body under data key');
+    throw new AppError(400, "Please provide data in the body under data key");
   }
   req.body = JSON.parse(req?.body?.data);
 
